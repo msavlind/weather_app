@@ -7,7 +7,9 @@ Expo, (33.0.0)
 React, (16.8.3)
 
 APIs:
+<br/>
 Google Autocomplete
+<br/>
 Openweathermap.org API
 
 # Requirements
