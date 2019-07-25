@@ -21,12 +21,6 @@ Openweathermap.org API
 <li>Use OpenWeatherMap and Google Autocomplete and learn how to use them by reading the documentation of the APIs.</li>
 </ul>
 
-<b>Completed so far:</b>
-<br/>
-UX/UI Design for all screens
-<br/>
-Page 1 requesting location access from user
-
 # Installing
 git clone https://github.com/msavlind/weather_app_WIP.git
 <br/>
