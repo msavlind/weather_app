@@ -27,6 +27,14 @@ git clone https://github.com/msavlind/weather_app_WIP.git
 npm install expo-cli --global
 <br/>
 Go to project directory and run npm start
+<br/>
+Google API Key: 
+<br/>
+Note that you have to replace the string 'GOOGLE_API_KEY' in the ManualLocation component, GooglePlacesInput function. 
+<br/>
+It should be replaced by your Google Places API key.
+<br/>
+Further instructions: https://developers.google.com/places/web-service/get-api-key
 
 # Developers
 Melissa Sävlind (melissa.savlind@gmail.com)

@@ -40,7 +40,7 @@ export default class ManualLocation extends React.Component {
             
             query={{
               // available options: https://developers.google.com/places/web-service/autocomplete
-              key: 'AIzaSyA2Hpa320Q3BU0hmKOq3hiUgy_Z0wXxa-4',
+              key: 'GOOGLE_API_KEY',
               language: 'en', // language of the results
               types: '(cities)' // default: 'geocode'
             }}
