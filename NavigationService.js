@@ -1,14 +1,3 @@
-/* import { createStackNavigator, createAppContainer } from 'react-navigation';
-import DisplayWeather from './DisplayWeather';
-
-const Navigator = createStackNavigator({
-  DisplayWeather: { screen: DisplayWeather },
-});
-
-const NavigatorContainer = createAppContainer(Navigator);
-
-export default NavigatorContainer; */
-
 import { NavigationActions } from 'react-navigation';
 
 let _navigator;

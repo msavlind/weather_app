@@ -31,12 +31,9 @@ export default class ManualLocation extends React.Component {
             fetchDetails={true}
             renderDescription={row => row.description} // custom description render
             onPress={(data, details = null) => { // 'details' is provided when fetchDetails = true
-              console.log(data, details);
               latitude = details.geometry.location.lat;
               longitude = details.geometry.location.lng;
               location = data.description;
-              console.log(latitude);
-              console.log(longitude);
             }}
             
             getDefaultValue={() => ''}

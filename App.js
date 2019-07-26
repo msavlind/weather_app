@@ -100,30 +100,25 @@ export default class App extends React.Component {
 
   //Get coordinates from ManualLocation and save in state, then make weather API call. 
   setCoordinates = (lat, lng, location) => {
-    //debugger
     this.setState({
       latitude: lat,
       longitude: lng,
       location: location,
     }, () => {this.getWeatherData();
     });
-    console.log(this.state);
   }
 
     //Make a call to Openweather to save the weather data in array
   getWeatherData = () => {
-    //debugger
     if(this.state.latitude !== '') {
       axios.get(`http://api.openweathermap.org/data/2.5/forecast/daily?lat=${this.state.latitude}&lon=${this.state.longitude}&cnt=7&units=metric&appid=${openweather_apikey}`)
       .then((response) => {
         this.setState({weatherArray: response.data.list}, () => {this.setCurrentWeather()});
-        console.log(response);
-        console.log(this.state.weatherArray); 
       })
       .catch((error) => {
-        console.log(error);
+        return error;
       });
-    } else console.log('no coordinate in state');
+    } 
   }
   
 
@@ -135,7 +130,6 @@ export default class App extends React.Component {
       todayTemp: todayTemp,
       todayCondition: todayCondition,
     });
-    console.log(this.state);
   }
 
   render () {

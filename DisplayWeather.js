@@ -11,7 +11,6 @@ import {
     TextInput, 
     ScrollView,
     Button } from 'react-native';
-//import { withNavigation } from 'react-navigation';
 var background = `${require('./assets/weather_landing.png')}`;
 var weatherIcon = '';
 var weatherIconSmall = '';
@@ -40,13 +39,11 @@ export default class DisplayWeather extends React.Component {
                 this.state.forecastConditions.push(this.props.state.weatherArray[i].weather[0].main);    
         }
         this.state.forecastConditions.splice(7);
-        console.log(this.state.forecastConditions);
     }
 
     render () {
         {this.props.getForecastDays()}
         {this.displayWeatherIcon()}
-        console.log(this.props.state.todayCondition);
         //Conditional background image based on weather condition
         if(this.props.state.todayCondition === 'Clear') {
             background = `${require('./assets/images/sun_background.png')}`;
