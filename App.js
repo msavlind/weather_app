@@ -53,17 +53,22 @@ export default class App extends React.Component {
     this.setState({status: false})
   }
 
-  //Ask user for permission to access their location
-  _getLocationAsync = async () => {
+   //Ask user for permission to access their location
+   _getLocationAsync = async () => {
     let { status } = await Permissions.askAsync(Permissions.LOCATION);
     if (status !== 'granted') {
       this.setState({
         errorMessage: 'Permission to access location was denied',
       });
+      return errorMessage;
     }
 
     let location = await Location.getCurrentPositionAsync({});
-    this.setState({ location: location });
+    let locationAddress = await Location.reverseGeocodeAsync(location.coords);
+    let lat = location.coords.latitude;
+    let lng = location.coords.longitude;
+    let locationString =  `${locationAddress[0].city}, ${locationAddress[0].country}`;
+    this.setCoordinates(lat, lng, locationString);
   };
 
   handleChange = (e) => {
